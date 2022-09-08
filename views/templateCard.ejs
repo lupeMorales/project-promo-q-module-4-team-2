@@ -2,78 +2,69 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Created card</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/8c88b3fdc7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/main.css" rel="stylesheet" />
+    <link rel="icon" href="./favicon.png" />
+    <title>Awesome Cards</title>
   </head>
   <body>
     <main>
-      <h1>hola caracola</h1>
-       <section class="preview">
-    <article class={`preview__box palette-${props.dataCard.palette}`}>
-      <button class="preview__reset " onClick={reset}>
-        <i class="fa-regular fa-trash-can"></i> Reset
-      </button>
-      <h3 class="preview__name ">
-        <%=name%>
-        {props.dataCard.name || `Nombre Apellido`}
-      </h3>
-      <p class="preview__job ">
-        {props.dataCard.job || `Front-end developer`}
-      </p>
-      <div class="preview__photo">
-        <div
-          class="profile__photo"
-          style={{ backgroundImage: `url(${props.avatar})` }}
-        ></div>
-      </div>
+      <section class="preview">
+        <article class="preview__box palette-<%= palette %>">
+          <h3 class="preview__name"><%= name %></h3>
+          <p class="preview__job"><%= job %></p>
+          <div class="preview__photo">
+            <img class="photo__profile" src="<%= photo %>"></img>
+          </div>
 
-      <nav>
-        <ul class="preview__socialIcons">
-          <li>
-            <a
-              href={`tel:${props.dataCard.phone}`}
-              rel="noreferrer"
-              class="preview__icon"
-            >
-              <i class="fa-solid fa-mobile-screen-button"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href={`mailto:${props.dataCard.email}`}
-              rel="noreferrer"
-              class="preview__icon"
-            >
-              <i class="fa-regular fa-envelope"></i>
-            </a>
-          </li>
+          <nav>
+            <ul class="preview__socialIcons">
+              <li>
+                <a href="<%= phone %>" rel="noreferrer" class="preview__icon">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </a>
+              </li>
+              <li>
+                <a href="<%= email %>" rel="noreferrer" class="preview__icon">
+                  <i class="fa-regular fa-envelope"></i>
+                </a>
+              </li>
 
-          <li>
-            <a
-              href={props.dataCard.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              class="preview__icon  "
-            >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href={props.dataCard.github}
-              rel="noreferrer"
-              target="_blank"
-              class="preview__icon"
-            >
-              <i class="fa-brands fa-github-alt "></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="preview__rectangle"></div>
-    </article>
-  </section> 
+              <li>
+                <a
+                  href="<%= linkedin %>"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="preview__icon"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="<%= github %>"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="preview__icon"
+                >
+                  <i class="fa-brands fa-github-alt"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="preview__rectangle"></div>
+        </article>
+      </section>
     </main>
   </body>
 </html>
