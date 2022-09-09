@@ -1,8 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
+const database = require('better-sqlite3');
 
 
+
+const db = new database('src/database.db', {verbose: console.log});
 const server = express();
 
 server.set('view engine', 'ejs')
@@ -21,6 +24,7 @@ const savedCard = [];
 //Primer endpoint crear tarjeta
 server.post('/card', (req, res) => {
 
+
   if(req.body.name ==="" || req.body.job==="" || req.body.email ==="" || req.body.linkedin==="" || req.body.github==="" || req.body.photo ===""){
 
     const responseError = {
@@ -29,13 +33,20 @@ server.post('/card', (req, res) => {
     }
     res.json(responseError)
   }else{
+
     const newCard = {
       ...req.body,
       id:uuidv4()
     }
-    
-    savedCard.push(newCard)
+
+    const query = db.prepare('INSERT INTO card ( id, name, job, palette, email, phone, linkedin, github, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+
+    query.run(newCard.id, newCard.name, newCard.job, newCard.palette, newCard.email, newCard.phone, newCard.linkedin, newCard.github, newCard.photo);
+
+    console.log(newCard)
+    // savedCard.push(newCard)
     const responseSuccess = {
+
       success: true,
       cardURL: `http://localhost:4000/card/${newCard.id}`
     }
@@ -53,8 +64,9 @@ server.get('/card/id', (req, res) => {
 
  server.get('/card/:id', (req, res) => {
   console.log(req.params.id);
-  const cardId = savedCard.find((cardUser)=>
-    cardUser.id=== req.params.id)
+  const query = db.prepare('SELECT * FROM card WHERE id= ?');
+  const cardId = query.get(req.params.id)
+ 
    res.render('templateCard', cardId);
  })
 
