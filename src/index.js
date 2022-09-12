@@ -48,7 +48,7 @@ server.post('/card', (req, res) => {
     const responseSuccess = {
 
       success: true,
-      cardURL: `http://localhost:4000/card/${newCard.id}`
+      cardURL: `https://las-faraonas-awesome-card.herokuapp.com/card/${newCard.id}`
     }
     res.json(responseSuccess)
   } 
@@ -57,7 +57,7 @@ server.post('/card', (req, res) => {
 //*Segundo endpoint devolver tarjeta
 server.get('/card/id', (req, res) => {
   res.json({
-    url: `http://localhost:4000/card/${savedCard.id}`
+    url: `https://las-faraonas-awesome-card.herokuapp.com/card/${savedCard.id}`
   })
 });
 
