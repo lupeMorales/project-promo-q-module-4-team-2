@@ -21,8 +21,10 @@
     <main>
       <section class="preview">
         <article class="preview__box palette-<%= palette %>">
-          <h3 class="preview__name"><%= name %></h3>
-          <p class="preview__job"><%= job %></p>
+          <div class="preview__container--<%= palette%>">
+            <h3 class="preview__name"><%= name %></h3>
+            <p class="preview__job"><%= job %></p>
+          </div>
           <div class="preview__photo">
             <img class="photo__profile" src="<%= photo %>"></img>
           </div>
