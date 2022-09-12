@@ -3,7 +3,6 @@
     border-bottom: 1px solid #d8d8d8;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%
 }
 
@@ -434,8 +433,24 @@
     width: 32px
 }
 
-.preview__container {
-    border-left: 5px solid #438792;
+.preview__container--1 {
+    border-left: 5px solid #438792
+}
+
+.preview__container--1,
+.preview__container--2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    row-gap: 5px
+}
+
+.preview__container--2 {
+    border-left: 5px solid #bd1010
+}
+
+.preview__container--3 {
+    border-left: 5px solid #eab052;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -795,5 +810,10 @@ table {
     font-weight: 600;
     padding: 10%;
     text-decoration: none;
-    text-transform: uppercase
+    text-transform: uppercase;
+    transition: opacity .5s ease
+}
+
+.buttonLanding__Link:hover {
+    opacity: .5
 }
