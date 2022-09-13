@@ -13,16 +13,22 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link href="/main.css" rel="stylesheet" />
     <link rel="icon" href="./favicon.png" />
     <title>Awesome Cards</title>
   </head>
   <body>
     <main>
-      <section class="preview">
-        <article class="preview__box palette-<%= palette %>">
-          <h3 class="preview__name"><%= name %></h3>
-          <p class="preview__job"><%= job %></p>
+      <section class="preview ">
+        <article class="preview__box palette-<%= palette %> animate__animated animate__bounceIn">
+          <div class="preview__container--<%= palette%>">
+            <h3 class="preview__name"><%= name %></h3>
+            <p class="preview__job"><%= job %></p>
+          </div>
           <div class="preview__photo">
             <img class="photo__profile" src="<%= photo %>"></img>
           </div>
