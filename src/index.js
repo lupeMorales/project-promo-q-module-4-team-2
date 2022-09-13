@@ -77,3 +77,4 @@ server.use(express.static(staticServer));
 //servidor de estático de estilos
 const staticStylesServer = 'src/build/static/public-css';
 server.use(express.static(staticStylesServer))
+
