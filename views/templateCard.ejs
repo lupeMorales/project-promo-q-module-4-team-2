@@ -36,12 +36,12 @@
           <nav>
             <ul class="preview__socialIcons">
               <li>
-                <a href="tel:<%=phone %>"  class="preview__icon">
+                <a href="tel:<%=phone %>"  class="preview__icon" title="Teléfono: <%=phone %> ">
                   <i class="fa-solid fa-mobile-screen-button"></i>
                 </a>
               </li>
               <li>
-                <a href="mailto:<%= email %>"  class="preview__icon">
+                <a href="mailto:<%= email %>"  class="preview__icon" title="Email: <%=email %> ">
                   <i class="fa-regular fa-envelope"></i>
                 </a>
               </li>
@@ -50,7 +50,7 @@
                 <a
                   href="https://<%= linkedin %>"
                   target="_blank"
-                  
+                  title="LinkedIn: <%=linkedin %> "
                   class="preview__icon"
                 >
                   <i class="fa-brands fa-linkedin-in"></i>
@@ -59,7 +59,7 @@
               <li>
                 <a
                   href="https://<%= github %>"
-                 
+                  title="Github: <%=github %> "
                   target="_blank"
                   class="preview__icon"
                 >
