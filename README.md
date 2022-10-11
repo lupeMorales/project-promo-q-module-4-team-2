@@ -39,10 +39,10 @@ Una vez todo instalado, es importante **arrancar el proyecto**, para ello tienes
 
 
 ## Equipo
-- Lili  [@lupeMorales](https://github.com/lupeMorales )
-- Vicky  [https://github.com/vvarona )
+- Lili  [@lilifernandez91](https://github.com/lilifernandez91 )
+- Vicky  [@vvvarona](https://github.com/vvarona )
 - Lupe  [@lupeMorales](https://github.com/lupeMorales )
-- Blanca  [https://github.com/blancabigeriego )
-- Nadia  [https://github.com/NadiaMonzon )
+- Blanca  [@blancabigeriego](https://github.com/blancabigeriego )
+- Nadia  [@NadiaMonzon](https://github.com/NadiaMonzon )
 
 
